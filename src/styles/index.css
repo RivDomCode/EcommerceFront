@@ -1,0 +1,30 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&display=swap');
+/* General */
+*{
+    padding:  0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: var(--BgColor);
+    color: var(--Text);
+    font-family: var(--MainFont);
+}
+/* Variables */
+:root{
+    --BgColor: #F2EFE5;
+    --Text : rgb(62, 58, 58);
+    --Titles: #6962AD;
+    --Sec: #83C0C1;
+    --Terc: #96E9C6;
+    --MainFont : 'Lato', sans-serif, impact;
+    --SpecialFont : 'Dosis', sans-serif, impact;
+    --NavSize: 5rem;
+    --TitlesSize:  2.5rem;
+    --TextSize:  1.25rem;
+}
+
+h1{
+    font-size: 2.2rem;
+    font-family: var(--SpecialFont);
+}
