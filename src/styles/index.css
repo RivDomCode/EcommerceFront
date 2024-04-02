@@ -5,14 +5,11 @@
     padding:  0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 62.5%;
-    background-color: var(--BgColor);
-    color: var(--Text);
     font-family: var(--MainFont);
 }
 /* Variables */
 :root{
-    --BgColor: #F2EFE5;
+    --BgColor: #edece9;
     --Text : rgb(62, 58, 58);
     --Titles: #6962AD;
     --Sec: #83C0C1;
@@ -26,5 +23,4 @@
 
 h1{
     font-size: 2.2rem;
-    font-family: var(--SpecialFont);
 }

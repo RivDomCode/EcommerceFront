@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react"
+import { Product } from "./interfaces/product";
+import { ProductList } from "./pages/ProductList";
+import { Header } from "./components/Header";
 
 function App() {
 
-  const [products, setProducts] = useState([
-    {name: 'prod1', price: 100},
-    {name: 'prod2', price: 200},
-  ]);
+  const [products, setProducts] = useState<Product[]>([]);
 
 const addProduct = () =>{
-  setProducts(prevState => [...prevState,  {name: 'prod' + prevState.length + 1 , price: 400} ]   )
+  setProducts(prevState => [...prevState,  {      id: prevState.length + 101,
+    name: 'prod' + prevState.length + 1 ,
+    price: 4030,
+    description: "description",
+    pictureUrl : "ssssss",
+    type: "clothes",
+    brand:"mine",
+    quantityInstock: prevState.length - 1,} ]   )
 }
 
 useEffect( () => {
@@ -19,15 +26,9 @@ useEffect( () => {
 
   return (
     <>
-          <h1>ECOMMERCE</h1>
-          <div>
-              {
-                products.map((product, index) => (
-                  <li key={index}>{product.name} -  ${product.price}</li>
-                ))
-              }
-          </div>
-          <button onClick={addProduct}>Add  Product</button>
+          <Header/>
+          <ProductList products={products} addProduct={addProduct}/>
+
     </>
   )
 }
